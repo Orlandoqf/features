@@ -14,9 +14,4 @@ public class FormularioPath {
     public By email = By.id("email");
     public String url = "https://demoqa.com/text-box";
 
-
-
-
-
-
 }

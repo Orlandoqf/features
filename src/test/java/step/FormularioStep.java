@@ -1,7 +1,6 @@
 package step;
 
 import page.FormularioPage;
-import paths.FormularioPath;
 
 public class FormularioStep {
 

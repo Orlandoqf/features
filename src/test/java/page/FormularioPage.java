@@ -1,13 +1,10 @@
 package page;
 
 import Base.Base;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import paths.FormularioPath;
 
 public class FormularioPage extends Base {
-
-    private WebDriver driver;
     FormularioPath formPath = new FormularioPath();
     FormularioPage formPage;
 
@@ -19,32 +16,28 @@ public class FormularioPage extends Base {
         super();
     }
 
-
     public void validarCargaPagina(){
         formPage = new FormularioPage(driver);
         formPage.chromeDriverConnection();
         formPage.visit(formPath.url);
-
     }
 
     public void ingresoDatos(){
-        type("Orlando Quispe", formPath.userName);
-        type("test@test.com", formPath.userEmail);
-        type("casa", formPath.currentAddress);
-        type("trabajo", formPath.permanentAddress);
-
+        formPage.type("Orlando Quispe", formPath.userName);
+        formPage.type("test@test.com", formPath.userEmail);
+        formPage.type("casa", formPath.currentAddress);
+        formPage.type("trabajo", formPath.permanentAddress);
     }
 
     public void clickEnElBoton(){
-        click(formPath.btn);
+        formPage.click(formPath.btn);
     }
 
     public void muestraDatos(){
-        System.out.println(getText(formPath.name));
-        System.out.println(getText(formPath.email));
-        isDisplayed(formPath.currentAddress);
-        isDisplayed(formPath.permanentAddress);
-
+        System.out.println(formPage.getText(formPath.name));
+        System.out.println(formPage.getText(formPath.email));
+        formPage.isDisplayed(formPath.currentAddress);
+        formPage.isDisplayed(formPath.permanentAddress);
     }
 
 }
