@@ -20,6 +20,7 @@ public class FormularioPage extends Base {
         formPage = new FormularioPage(driver);
         formPage.chromeDriverConnection();
         formPage.visit(formPath.url);
+        formPage.maximize();
     }
 
     public void ingresoDatos(){

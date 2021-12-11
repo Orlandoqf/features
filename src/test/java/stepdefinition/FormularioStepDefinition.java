@@ -26,7 +26,7 @@ public class FormularioStepDefinition {
         formStep.clickEnElBoton();
     }
 
-    @Entonces("se muestran mis datos en la pantallaa")
+    @Entonces("se muestran mis datos en la pantalla")
     public void seMuestranMisDatosEnLaPantallaa() {
         formStep.muestraDatos();
     }

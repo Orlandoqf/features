@@ -10,4 +10,13 @@
       Dado que la web DEMOQA esta disponiblee
       Cuando registro mis datoss
       Y Doy Click en el botonn
-      Entonces se muestran mis datos en la pantallaa
+      Entonces se muestran mis datos en la pantalla
+
+
+
+    @CASO2
+    Escenario: Hacer login en una pagina de pruebas
+      Dado que la web Mercury tours esta disponible
+      Cuando tipeo mis datos
+      Y Doy Click en el boton
+      Entonces se muestra un mensaje de exito

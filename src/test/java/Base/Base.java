@@ -38,6 +38,9 @@ public class Base {
     public void type(String inputText, By locator){
         driver.findElement(locator).sendKeys(inputText);
     }
+    public void iniciarSesion(String user, String pass){
+
+    }
 
     public void click(By locator){
         driver.findElement(locator).click();
