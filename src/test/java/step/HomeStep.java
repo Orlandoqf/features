@@ -3,9 +3,10 @@ package step;
 import page.HomePage;
 
 public class HomeStep {
-    HomePage homPage = new HomePage();
+
+    HomePage homePage = new HomePage();
 
     public void mensajeExitoso(){
-        homPage.mensajeExitoso();
+        homePage.mensajeExitoso();
     }
 }

@@ -4,16 +4,16 @@ import page.LoginPage;
 
 public class LoginStep {
 
-    LoginPage logPage = new LoginPage();
+    LoginPage loginPage = new LoginPage();
 
     public void ingresarPagina(){
-        logPage.ingresarPagina();
+        loginPage.ingresarPagina();
     }
     public void iniciarSesion(){
-        logPage.iniciarSesion();
+        loginPage.iniciarSesion();
     }
     public void clickEnBoton(){
-        logPage.clickEnBoton();
+        loginPage.clickEnBoton();
     }
 
 

@@ -2,27 +2,26 @@ package stepdefinition;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import step.LoginStep;
 
 public class LoginStepDefinition {
 
-    LoginStep logStep = new LoginStep();
+    LoginStep loginStepStep = new LoginStep();
 
     @Dado("que la web Mercury tours esta disponible")
     public void queLaWebMercuryToursEstaDisponible() {
-        logStep.ingresarPagina();
+        loginStepStep.ingresarPagina();
     }
 
     @Cuando("tipeo mis datos")
     public void tipeoMisDatos() {
-        logStep.iniciarSesion();
+        loginStepStep.iniciarSesion();
     }
 
     @Y("Doy Click en el boton")
     public void doyClickEnElBoton() {
-        logStep.clickEnBoton();
+        loginStepStep.clickEnBoton();
     }
 
 }

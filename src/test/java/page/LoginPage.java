@@ -5,33 +5,33 @@ import org.openqa.selenium.WebDriver;
 import paths.LoginPath;
 
 public class LoginPage extends Base {
-    LoginPath logPath = new LoginPath();
-    LoginPage logPage;
-
-
+    LoginPath loginPath = new LoginPath();
+    LoginPage loginPage;
 
     public LoginPage(WebDriver driver){
         super(driver);
     }
-    public LoginPage(){
-        super();
+
+    public LoginPage() {
+
     }
 
     public void ingresarPagina(){
-        logPage = new LoginPage(driver);
-        logPage.chromeDriverConnection();
-        logPage.visit(logPath.url);
-        logPage.maximize();
+        loginPage = new LoginPage(driver);
+        driver = loginPage.chromeDriverConnection();
+        loginPage.visit(loginPath.url);
+        loginPage.maximize();
     }
 
-
     public void iniciarSesion(){
-        logPage.type("Qualityadmin", logPath.txtUser);
-        logPage.type("pass1", logPath.txtPass);
+        type("Qualityadmin", loginPath.txtUser);
+        type("pass1", loginPath.txtPass);
+        String prueba = getText(loginPath.test);
+        System.out.println(prueba);
     }
 
     public void clickEnBoton(){
-        logPage.click(logPath.btnLogin);
+        click(loginPath.btnLogin);
     }
 
 }

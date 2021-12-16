@@ -20,3 +20,6 @@
       Cuando tipeo mis datos
       Y Doy Click en el boton
       Entonces se muestra un mensaje de exito
+
+      @CASO3
+      Escenario:

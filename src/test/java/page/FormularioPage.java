@@ -18,6 +18,7 @@ public class FormularioPage extends Base {
 
     public void validarCargaPagina(){
         formPage = new FormularioPage(driver);
+        System.out.println(driver);
         formPage.chromeDriverConnection();
         formPage.visit(formPath.url);
         formPage.maximize();
