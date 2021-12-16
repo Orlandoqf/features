@@ -15,6 +15,9 @@ public class LoginStep {
     public void clickEnBoton(){
         loginPage.clickEnBoton();
     }
+    public void mensajeExitoso(){
+        loginPage.mensajeExitoso();
+    }
 
 
 

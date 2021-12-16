@@ -1,38 +1,35 @@
 package page;
 
 import Base.Base;
-import org.openqa.selenium.WebDriver;
+import paths.HomePath;
 import paths.LoginPath;
 
 public class LoginPage extends Base {
+
     LoginPath loginPath = new LoginPath();
-    LoginPage loginPage;
-
-    public LoginPage(WebDriver driver){
-        super(driver);
-    }
-
-    public LoginPage() {
-
-    }
+    HomePath homePath = new HomePath();
 
     public void ingresarPagina(){
-        loginPage = new LoginPage(driver);
-        driver = loginPage.chromeDriverConnection();
-        loginPage.visit(loginPath.url);
-        loginPage.maximize();
+        driver = chromeDriverConnection();
+        visit(loginPath.url);
+        maximize();
     }
 
     public void iniciarSesion(){
         type("Qualityadmin", loginPath.txtUser);
         type("pass1", loginPath.txtPass);
-        String prueba = getText(loginPath.test);
-        System.out.println(prueba);
     }
 
     public void clickEnBoton(){
         click(loginPath.btnLogin);
     }
 
+    public void mensajeExitoso() {
+        click(homePath.test);
+        String mensaje = getText(homePath.test);
+        //getText(homePath.txtMesajeExito);
+        System.out.println(mensaje);
+
+}
 }
 
