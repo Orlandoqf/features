@@ -1,16 +1,14 @@
 package page;
 
-import Base.Base;
-import paths.HomePath;
+import Base.Base;;
 import paths.LoginPath;
 
 public class LoginPage extends Base {
 
-    LoginPath loginPath = new LoginPath();
-    HomePath homePath = new HomePath();
+    LoginPath loginPath;
 
     public void ingresarPagina(){
-        driver = chromeDriverConnection();
+        chromeDriverConnection();
         visit(loginPath.url);
         maximize();
     }
@@ -24,12 +22,6 @@ public class LoginPage extends Base {
         click(loginPath.btnLogin);
     }
 
-    public void mensajeExitoso() {
-        click(homePath.test);
-        String mensaje = getText(homePath.test);
-        //getText(homePath.txtMesajeExito);
-        System.out.println(mensaje);
 
-}
 }
 

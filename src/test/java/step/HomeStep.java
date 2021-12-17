@@ -4,7 +4,7 @@ import page.HomePage;
 
 public class HomeStep {
 
-    HomePage homePage = new HomePage();
+    HomePage homePage;
 
     public void mensajeExitoso(){
         homePage.mensajeExitoso();

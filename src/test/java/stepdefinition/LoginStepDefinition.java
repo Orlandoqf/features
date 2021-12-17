@@ -9,8 +9,7 @@ import step.LoginStep;
 
 public class LoginStepDefinition {
 
-    LoginStep loginStepStep = new LoginStep();
-    HomeStep homeStep = new HomeStep();
+    LoginStep loginStepStep;
 
     @Dado("que la web Mercury tours esta disponible")
     public void queLaWebMercuryToursEstaDisponible() {
@@ -27,9 +26,5 @@ public class LoginStepDefinition {
         loginStepStep.clickEnBoton();
     }
 
-    @Entonces("se muestra un mensaje de exito")
-    public void seMuestraUnMensajeDeExito() {
-        loginStepStep.mensajeExitoso();
-    }
 
 }

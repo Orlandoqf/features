@@ -6,10 +6,9 @@ import paths.HomePath;
 
 public class HomePage extends Base {
 
-    HomePath homePath = new HomePath();
+    HomePath homePath;
 
     public void mensajeExitoso() {
-        click(homePath.test);
         String mensaje = getText(homePath.txtMesajeExito);
         System.out.println(mensaje);
     }
